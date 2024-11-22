@@ -1,9 +1,88 @@
 ///fonts///
 $font-primary: "Poppins";
-$font-secondary:  "monospace";
+$font-secondary: "monospace";
 $font-size: 16px;
 
 ///colors///
-$primary-color: #222;
-$secondary-color: #f00;
-$footer-bg: #141416;
+$body-bg: #F9F9F9;
+$brand-dark: #141416;
+$brand-black: #000;
+$brand-white: #fff;
+$color: $brand-black;
+
+$gray-primary: #EDEDED;
+$gray-secondary: #848586;
+$gray-accent: #606060;
+
+$weekle-container: 1590px;
+
+@mixin section-title {
+    font-size: 46px;
+    margin-bottom: calc(46px * 2);
+
+}
+
+@mixin flex-centered {
+    display: flex;
+    justify-content: center;
+}
+
+ 
+@mixin slider-nav {
+    position: relative;
+    height: 69px;
+    display: flex;
+    justify-content: center;
+    width: 166px;
+    border-radius: 18px;
+    box-shadow: 0px 38px 36px -15px rgb(15 15 15 / 10%), 0px 45px 36px -15px rgb(15 15 15 / 10%), -10px 20px 36px -15px rgb(15 15 15 / 10%), 10px 20px 36px -15px rgb(15 15 15 / 10%);
+}
+
+@mixin slider-nav-separator {
+    content: "";
+    width: 2px;
+    height: 26px;
+    background-color: $gray-accent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    z-index: 10;
+}
+
+@mixin slider-nav-btn {
+    position: static;
+    height: 100%;
+    width: 83px;
+ 
+    margin: 0;
+    color: $gray-secondary;
+    background: $gray-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &:hover {
+        color: #23262F;
+    }
+
+    &:after {
+        display: none;
+    }
+
+    svg {
+        width: 26px;
+        height: 26px;
+
+    }
+}
+
+@mixin swiper-button-prev {
+    border-radius: 18px 0 0 18px;
+}
+
+@mixin swiper-button-next {
+    border-radius: 0 18px 18px 0;
+}

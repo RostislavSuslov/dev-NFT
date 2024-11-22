@@ -1,0 +1,29 @@
+/*delete*/
+.tabs {
+    border: 1px solid;
+    padding: 24px;
+    &__nav,
+    &__content,
+    &__button {
+        border: 1px solid;
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+/*custom*/
+.tabs {
+    &__button {
+        &.active {
+            background-color: rgb(105, 255, 160);
+        }
+    }
+}
+
+.tabs__content {
+    display: none;
+}
+
+.tabs__content.active {
+    display: block;
+}

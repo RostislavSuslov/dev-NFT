@@ -2,23 +2,25 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 body {
     display: flex;
     flex-direction: column;
-    color: #000;
-    font-family: $font-primary;
-    font-size: 16px;
+    color: $color;
+    font-size: $font-size;
     min-height: 100vh;
+    background-color: $body-bg;
+    font-family: $font-primary, $font-secondary;
 }
 
 a {
     transition: .3s;
-    color: #535353;
+    color: $gray-accent;
 
     &:hover {
-        color: #000;
+        color: $color;
     }
 }
 
@@ -36,54 +38,185 @@ img {
     max-width: 100%;
 }
 
+h1 {
+    font-size: 45px;
+}
+
+h3 {
+    font-size: 36px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+}
+
 .container {
     width: 100%;
-    max-width: 1251px + 24px;
+    max-width: 1248px + 24px;
     padding-left: 12px;
     padding-right: 12px;
     margin-left: auto;
     margin-right: auto;
 }
 
-
 .btn {
     border-radius: 16px;
     font-size: 16px;
     display: inline-block;
-    color: #000;
-    border: 2px solid;
+    color: $color;
+    border: 2px solid $color;
     text-transform: uppercase;
     font-weight: 600;
-    padding: 18px 23px;
+    padding: 16px 23px;
     cursor: pointer;
     transition: .3s;
+    text-decoration: none;
 
     &.btn-primary {
-        background-color: #000;
-        color: #fff;
+        background-color: $color;
+        color: $brand-white;
 
         &:hover {
-            background-color: #fff;
-            color: #000;
-
+            background-color: $brand-white;
+            color: $color;
+            border-color: $color;
         }
     }
 
     &.btn-secondary {
-        background-color: #fff;
-        color: #000;
+        background-color: $brand-white;
+        color: $color;
 
         &:hover {
-            background-color: #000;
-            color: #fff;
+            background-color: $color;
+            color: $brand-white;
         }
     }
+
+
+    &.btn-small {
+        font-size: 14px;
+        padding: 13px 23px;
+    }
+
+    &:focus,
+    &:active:focus {
+        box-shadow: none;
+        border-color: $color;
+    }
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+.g-1 {
+    gap: 1rem;
+}
+
+.g-2 {
+    gap: 2rem;
+}
+
+.g-3 {
+    gap: 3rem;
+}
+
+.g-4 {
+    gap: 4rem;
+}
+
+.g-5 {
+    gap: 5rem;
+}
+
+.gray-accent {
+    color: $gray-accent;
+}
+
+.gray-secondary {
+    color: $gray-secondary;
+}
+
+.section-title {
+    @include section-title;
+    @include flex-centered;
+    font-weight: 600;
 }
 
 
 
 
+.icon {
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
-.d-none {
-    display: none;
+.icon-ethereum {
+    background-image: url(assets/img/icon-ethereum.svg);
+}
+
+.icon-ripple {
+    background-image: url(assets/img/icon-ripple.png);
+}
+
+.icon-xs {
+    width: 17px;
+    height: 17px;
+}
+
+.icon-sm {
+    width: 21px;
+    height: 21px;
+}
+
+.icon-md {
+    width: 31px;
+    height: 31px;
+}
+
+.icon-lg {
+    width: 45px;
+    height: 45px;
+}
+
+.color-red {
+    color: red;
+}
+
+.color-green {
+    color: green;
+}
+
+.wiget-user__percent_totop {
+    @extend .color-red;
+}
+
+.wiget-user__percent_tobottom {
+    @extend .color-green;
 }

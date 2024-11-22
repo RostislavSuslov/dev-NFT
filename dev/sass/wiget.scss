@@ -1,0 +1,215 @@
+.wiget {
+    padding: 24px 26px 21px;
+    background: #fff;
+    border-radius: 16px;
+    max-width: 365px;
+    width: 100%;
+    position: relative;
+
+    &__title {
+        display: flex;
+        padding-right: 50px;
+        margin-bottom: 28px;
+
+        h3 {
+            font-size: 21px;
+        }
+    }
+
+    .layout-menu {
+        position: absolute;
+        top: 25px;
+        right: 32px;
+    }
+
+    &.grid {
+        .wiget-users-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .wiget-users-list__item {
+            width: calc(50% - 12px);
+        }
+        
+        .wiget-user {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .wiget-user__volume {
+            margin: 0;
+        }
+    }
+}
+
+.layout-menu {
+    &.show {
+        .layout-case {
+            display: flex;
+        }
+
+        .layout-case__button {
+            span {
+                background-color: $brand-dark;
+
+                &:before,
+                &:after {
+                    background-color: $brand-dark;
+                }
+            }
+        }
+    }
+}
+
+.layout-case__button {
+    border: none;
+    height: 16px;
+    width: 36px;
+    line-height: 0;
+    font-size: 0;
+    color: $gray-primary;
+    background-color: transparent;
+    position: relative;
+
+    &:hover {
+        span {
+            background-color: $brand-dark;
+
+            &:before,
+            &:after {
+                background-color: $brand-dark;
+            }
+        }
+    }
+
+    svg {
+        height: inherit;
+        width: inherit;
+    }
+
+    span {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: $gray-secondary;
+        border-radius: 50%;
+
+
+        &:before,
+        &:after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: $gray-secondary;
+            position: absolute;
+            left: 0;
+            top: 3;
+            border-radius: 50%;
+        }
+
+        &:after {
+            left: initial;
+            right: 0;
+        }
+    }
+}
+
+.layout-case {
+    padding: 0;
+    display: none;
+    gap: 12px;
+    border: 3px solid #CBD5E0;
+    background-color: #fff;
+    padding: 6px;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100px;
+    z-index: 1;
+
+    &__item {
+        color: #fff;
+        cursor: pointer;
+
+
+        &.active,
+        &.active:hover,
+        &:hover {
+            opacity: 1;
+            color: #000;
+        }
+
+        &:hover {
+            opacity: .7;
+        }
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+
+.wiget-user {
+    display: flex;
+    align-items: baseline;
+}
+
+.wiget-users-list {
+    padding: 0;
+    max-height: 289px;
+    overflow: auto;
+    padding: 0 12px 0 0;
+
+    counter-reset: counterCustomName;
+}
+
+.wiget-users-list__item {
+    margin-bottom: 26px;
+    position: relative;
+
+    &::before {
+        content: counter(counterCustomName) ".";
+        counter-increment: counterCustomName;
+
+        width: 21px;
+        height: 21px;
+        background-color: #fff;
+        font-weight: 700;
+        font-size: 11px;
+        position: absolute;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 55px;
+        left: 57px;
+    }
+}
+
+.wiget-user__volume {
+    margin-left: auto;
+}
+
+.wiget-user__avatar {
+    margin-right: 15px;
+}
+
+.wiget-user__name {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.wiget-user__nick-name {
+    font-size: 12px;
+    color: gray;
+}
+
+.wiget-user__price {
+    font-weight: 700;
+}

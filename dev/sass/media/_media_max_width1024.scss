@@ -5,18 +5,19 @@
 
 
     .mobile-container {
-        display: none;
+        visibility: hidden;
         flex-direction: column;
         position: absolute;
-        left: 0;
+        left: -100%;
         top: 106px;
         background: black;
         gap: 24px;
         padding: 36px 48px 48px;
-
-
+        transition: .3s;
+        z-index: 10;
         &.show {
-            display: flex;
+            visibility: visible;
+            left: 0;
         }
     }
 
@@ -35,7 +36,7 @@
 
         a {
             &:hover {
-                color: #fff;
+                color: $brand-white;
             }
         }
     }
@@ -56,6 +57,31 @@
             width: 100%;
         }
     }
+
+    .banner {
+        >.container {
+            flex-direction: column;
+        }
+
+        &-over-title {
+            font-size: 10px;
+            border-top: none;
+
+            &::before {
+                content: "";
+                width: 33px;
+                height: 1px;
+                background-color: $gray-primary;
+                display: inline-block;
+                margin: 0 12px 3px 0;
+            }
+        }
+    }
+
+    .carousel-weekly {
+        max-width:562px;
+    }
+
 
     footer .container {
         position: relative;

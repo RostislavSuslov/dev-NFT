@@ -1,0 +1,32 @@
+.product {
+    background-color: #fff;
+    width: 100%;
+    max-width: 281px;
+    border-radius: 24px;
+    padding: 14px 14px 20px;
+    display: flex;
+    flex-direction: column;
+    &-img {
+        margin-bottom: 19px;
+    }
+    &-title {
+        color: $brand-dark;
+        font-size: 21px;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+    &-bid-title {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: $gray-secondary;
+    }
+    &-bid {
+        display: flex;
+        i {
+            margin-right: 2px;
+        }
+    }
+    .btn {
+        margin: -51px 0 0 auto;
+    }
+}

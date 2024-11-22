@@ -1,12 +1,12 @@
 footer {
-    background-color: $footer-bg;
+    background-color: $brand-dark;
     margin-top: auto;
 }
 
 .footer-top {
     display: flex;
     padding: 91px 0 25px 0;
-    border-bottom: 1px solid #818181;
+    border-bottom: 1px solid  $gray-secondary;
 }
 
 .footer-logo {
@@ -26,7 +26,7 @@ footer {
 
 .footer-nav-item {
     a {
-        color: #fff;
+        color: $brand-white;
         text-decoration: none;
         font-weight: 500;
     }
@@ -48,13 +48,13 @@ footer {
         width: 22px;
 
         &:hover {
-            color: #fff;
+            color: $brand-white;
         }
     }
 }
 
 .copywrite {
-    color: #999999;
+    color: $gray-secondary;
     font-size: 17px;
     font-weight: 500;
 }
