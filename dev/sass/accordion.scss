@@ -1,0 +1,41 @@
+.accordion {
+    border: 1px solid;
+    padding: 24px;
+
+    &-item {
+        border: 1px solid;
+        padding: 12px;
+
+        &__button {
+            text-align: left;
+            width: 100%;
+            border: 1px solid;
+            padding: 12px;
+            margin-bottom: 12px;
+        }
+
+        &__content {
+            border: 1px solid;
+            padding: 12px;
+        }
+    }
+}
+
+
+.accordion {
+    &-item {
+        &__content {
+            display: none;
+        }
+
+        &.active {
+            &__button {
+                background-color: rgb(105, 255, 160);
+            }
+
+            &__content {
+                display: block;
+            }
+        }
+    }
+}
