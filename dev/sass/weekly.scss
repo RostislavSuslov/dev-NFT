@@ -1,24 +1,31 @@
 .weekly {
     padding: 70px 0 273px;
+    margin-bottom: 236px;
     background-color: $gray-primary;
     position: relative;
+
     .container {
-        max-width: 1566px;
-        overflow: hidden;
-    }
+        position: relative;
+       max-width: 1596px;
+     }
 
     .section-title {
         @extend .gray-secondary;
     }
+
+    .wiget {
+        position: absolute;
+        right: 175px;
+        bottom: -371px;
+    }
 }
 
 .carousel-weekly {
-    max-width: 923px;
+    // max-width: 923px;
     width: 100%;
-    overflow: visible;
 
     .swiper-slide {
-        min-width: 281px;
+         width: 281px;
 
     }
 }
@@ -31,17 +38,15 @@
 .weekly-slider-navigation {
     @include slider-nav;
 
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    bottom: 90px;
+    margin: 114px auto 0;
+
     &::after {
-       @include slider-nav-separator;
+        @include slider-nav-separator;
     }
 }
 
 .weekly-button-prev,
-.weekly-button-next {   
+.weekly-button-next {
     @include slider-nav-btn;
 }
 

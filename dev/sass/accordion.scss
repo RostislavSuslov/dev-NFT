@@ -23,6 +23,7 @@
 
 
 .accordion {
+    width: 100%;
     &-item {
         &__content {
             display: none;
@@ -30,10 +31,10 @@
 
         &.active {
             &__button {
-                background-color: rgb(105, 255, 160);
+                background-color: #69ffa0;
             }
 
-            &__content {
+            .accordion-item__content {
                 display: block;
             }
         }

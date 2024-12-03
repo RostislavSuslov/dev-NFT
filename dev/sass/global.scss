@@ -50,13 +50,6 @@ h6 {
     font-size: 18px;
 }
 
-.wrapper {
-    max-width: 1920px;
-    margin: 0 auto;
-    overflow: hidden;
-    width: 100%;
-}
-
 .container {
     width: 100%;
     max-width: 1248px + 24px;
@@ -214,9 +207,13 @@ textarea {
 }
 
 .wiget-user__percent_totop {
-    @extend .color-red;
+    @extend .color-green;
 }
 
 .wiget-user__percent_tobottom {
-    @extend .color-green;
+    @extend .color-red;
+}
+
+.wiget-user__percent_zero {
+    color: $gray-secondary;
 }

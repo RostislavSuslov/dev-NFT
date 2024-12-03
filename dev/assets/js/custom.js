@@ -3,6 +3,25 @@ window.addEventListener("load", function(event) {
     const btnBurger = document.querySelector('.btn-burger')
     const mobileContainer = document.querySelector('.mobile-container')
     const linkBack = document.querySelector('.history-back')
+    const wigetUserPercent = document.querySelectorAll('.wiget-user__percent')
+
+    wigetUserPercent.forEach(item => {
+        let string = item.textContent
+        let stringComa = /,/gi;
+        let stringPercent = /%/gi;
+        let refactoringString = string.replace(stringComa, '.').replace(stringPercent, '')
+        let val = Number(refactoringString)
+
+        if(val > 0) {
+            item.classList.add('wiget-user__percent_totop')
+        } else if (val < 0) {
+            item.classList.add('wiget-user__percent_tobottom')
+        } else {
+            item.classList.add('wiget-user__percent_zero')
+        }
+        
+    })
+    
 
     function historyBack() {
         linkBack.addEventListener('click', function() {
@@ -33,35 +52,19 @@ window.addEventListener("load", function(event) {
     const carouselWeekly = new Swiper('.carousel-weekly', {
         speed: 700,
         spaceBetween: 40,
-        slidesPerView: 3,
+        slidesPerView: "auto",
         centeredSlides: true,
         loop: true,
         navigation: {
             nextEl: '.weekly-button-next',
             prevEl: '.weekly-button-prev',
         },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 40,
-                centeredSlides: true,
-            },
-            // when window width is >= 768
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 40,
-                centeredSlides: true,
-            },
-            1025: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-                centeredSlides: true,
-            }
-        }
+ 
     });
 
-
+    
+    linkBack ? historyBack() : null;
     document.querySelector('.wiget') ? installWiget() : null;
     document.querySelector('.tabs') ? installTabs() : null;
-    linkBack ? historyBack() : null;
+    document.querySelector('.accordion') ? accordionInstall() : null;
 })
