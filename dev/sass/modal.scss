@@ -1,0 +1,24 @@
+.custom-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #1f0d0deb;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    display: none;
+    &.show {
+        display: block;
+    }
+    &__body {
+        border: 1px solid #fff;
+        max-width: 500px;
+        border-radius: 8px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 24px;
+    }
+}

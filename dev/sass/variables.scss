@@ -17,9 +17,8 @@ $gray-accent: #606060;
 $weekle-container: 1590px;
 
 @mixin section-title {
-    font-size: 46px;
-    margin-bottom: calc(46px * 2);
-
+    font-size: 48px;
+    margin-bottom: 90px;
 }
 
 @mixin flex-centered {

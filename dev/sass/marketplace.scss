@@ -1,0 +1,16 @@
+.marketplace {
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 100px;
+        border-bottom: 1px solid #abacb8;
+    }
+
+}
+.market-place-grid {
+    display: grid;
+    grid-gap: 66px 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 85px;
+}

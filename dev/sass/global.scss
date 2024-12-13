@@ -46,6 +46,10 @@ h3 {
     font-size: 36px;
 }
 
+h5 {
+    font-size: 20px;
+}
+
 h6 {
     font-size: 18px;
 }
@@ -90,6 +94,10 @@ h6 {
         &:hover {
             background-color: $color;
             color: $brand-white;
+
+            .icon {
+                filter: invert(167%) sepia(71%) saturate(0%) hue-rotate(23deg) brightness(102%) contrast(105%);
+            }
         }
     }
 
@@ -104,6 +112,8 @@ h6 {
         box-shadow: none;
         border-color: $color;
     }
+
+
 }
 
 
@@ -154,10 +164,34 @@ textarea {
     color: $gray-secondary;
 }
 
-.section-title {
+.template-title {
     @include section-title;
     @include flex-centered;
     font-weight: 600;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-size: 46px;
+        margin: 0;
+    }
+}
+
+.button-row {
+    display: flex;
+    padding-top: 64px;
+
+    .btn {
+        margin: 0 11px;
+        padding: 14px 16px;
+        min-width: 72px;
+        display: flex;
+
+        .icon {
+            margin-right: 8px;
+        }
+
+    }
 }
 
 
@@ -168,6 +202,7 @@ textarea {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    vertical-align: middle;
 }
 
 .icon-ethereum {
@@ -178,14 +213,27 @@ textarea {
     background-image: url(assets/img/icon-ripple.png);
 }
 
+.icon-category {
+    background-image: url(assets/img/icon-category.svg);
+}
+
+.icon-collection {
+    background-image: url(assets/img/icon-collection.svg);
+}
+
+.icon-dollar {
+    background-image: url(assets/img/icon-dollar.svg);
+}
+
+
 .icon-xs {
     width: 17px;
     height: 17px;
 }
 
 .icon-sm {
-    width: 21px;
-    height: 21px;
+    width: 22px;
+    height: 22px;
 }
 
 .icon-md {
@@ -199,11 +247,11 @@ textarea {
 }
 
 .color-red {
-    color: red;
+    color: #E23333;
 }
 
 .color-green {
-    color: green;
+    color: #10C352;
 }
 
 .wiget-user__percent_totop {
@@ -216,4 +264,28 @@ textarea {
 
 .wiget-user__percent_zero {
     color: $gray-secondary;
+}
+
+
+.explore-link {
+    margin-left: auto;
+    text-decoration: none;
+    font-size: 18px;
+    color: #abacb8;
+    display: flex;
+    align-items: center;
+
+    svg {
+        color: #ACADB9;
+        width: 12px;
+        height: 12px;
+        transition: .3s;
+        margin-left: 12px;
+    }
+
+    &:hover {
+        svg {
+            color: #000;
+        }
+    }
 }

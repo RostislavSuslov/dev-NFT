@@ -8,6 +8,7 @@
     flex-direction: column;
     &-img {
         margin-bottom: 19px;
+        position: relative;
     }
     &-title {
         color: $brand-dark;
@@ -22,6 +23,7 @@
     }
     &-bid {
         display: flex;
+        font-size: 16px;
         i {
             margin-right: 2px;
         }
@@ -29,4 +31,15 @@
     .btn {
         margin: -51px 0 0 auto;
     }
+}
+
+.product-timer {
+    font-size: 14px;
+    background: #1c1d2059;
+    border-radius: 10px;
+    color: #fff;
+    padding: 8px 14px;
+    position: absolute;
+    right: 10px;
+    top: 14px;
 }

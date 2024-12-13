@@ -25,15 +25,9 @@ header {
         font-size: 18px;
         text-transform: uppercase;
         color: $gray-accent;
-      
+
         &:hover,
         &.active {
-            color: $color;
-        }
-    }
-
-    &.active {
-        a {
             color: $color;
         }
     }
